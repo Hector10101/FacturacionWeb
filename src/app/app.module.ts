@@ -23,6 +23,7 @@ import { EditSucursalComponent } from './Componentes/Sucursales/edit-sucursal/ed
 import { EliSucursalComponent } from './Componentes/Sucursales/eli-sucursal/eli-sucursal.component';
 import { HomeAlmacenesComponent } from './Componentes/Almacenes/home-almacenes/home-almacenes.component';
 import { AgregarAlmacenesComponent } from './Componentes/Almacenes/agregar-almacenes/agregar-almacenes.component';
+import { VerAlmacenesComponent } from './Componentes/Almacenes/ver-almacenes/ver-almacenes.component';
 
 
 
@@ -46,6 +47,7 @@ import { AgregarAlmacenesComponent } from './Componentes/Almacenes/agregar-almac
     EliSucursalComponent,
     HomeAlmacenesComponent,
     AgregarAlmacenesComponent,
+    VerAlmacenesComponent,
 
   ],
   imports: [
