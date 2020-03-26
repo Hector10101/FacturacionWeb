@@ -13,6 +13,7 @@ import { VerSucursaliesComponent } from './Componentes/Sucursales/ver-sucursalie
 import { ModifiSucursalesComponent } from './Componentes/Sucursales/modifi-sucursales/modifi-sucursales.component';
 import { EditSucursalComponent } from './Componentes/Sucursales/edit-sucursal/edit-sucursal.component';
 import { EliSucursalComponent } from './Componentes/Sucursales/eli-sucursal/eli-sucursal.component';
+import { HomeAlmacenesComponent } from './Componentes/Almacenes/home-almacenes/home-almacenes.component';
 
 
 const app_routes: Routes = [
@@ -34,12 +35,8 @@ const app_routes: Routes = [
     { path: 'EditSucursales', component: EditSucursalComponent},
     { path: 'EliSucursales', component: EliSucursalComponent},
 
-
-
-
-
-
-
+    //Almacenes
+    { path: 'HomeAlmacenes', component: HomeAlmacenesComponent},
 
 
 
