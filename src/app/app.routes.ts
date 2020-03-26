@@ -16,6 +16,9 @@ import { EliSucursalComponent } from './Componentes/Sucursales/eli-sucursal/eli-
 import { HomeAlmacenesComponent } from './Componentes/Almacenes/home-almacenes/home-almacenes.component';
 import { AgregarAlmacenesComponent } from './Componentes/Almacenes/agregar-almacenes/agregar-almacenes.component';
 import { VerAlmacenesComponent } from './Componentes/Almacenes/ver-almacenes/ver-almacenes.component';
+import { ModifiAlmacenesComponent } from './Componentes/Almacenes/modifi-almacenes/modifi-almacenes.component';
+import { EdiAlmacenesComponent } from './Componentes/Almacenes/edi-almacenes/edi-almacenes.component';
+import { EliAlmacenesComponent } from './Componentes/Almacenes/eli-almacenes/eli-almacenes.component';
 
 
 const app_routes: Routes = [
@@ -41,6 +44,12 @@ const app_routes: Routes = [
     { path: 'HomeAlmacenes', component: HomeAlmacenesComponent},
     { path: 'AgregarAlmacenes', component: AgregarAlmacenesComponent},
     { path: 'VerAlmacenes', component: VerAlmacenesComponent},
+    { path: 'ModifiAlmacenes', component: ModifiAlmacenesComponent},
+    { path: 'EditAlmacenes', component: EdiAlmacenesComponent},
+    { path: 'EliAlmacenes', component: EliAlmacenesComponent},
+
+
+
 
 
 

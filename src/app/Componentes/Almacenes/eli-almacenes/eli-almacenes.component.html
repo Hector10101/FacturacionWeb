@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <h3>Eliminar Almacen</h3>
+    <a class="text-primary alert-link" [routerLink]="['../AgregarAlmacenes']">¿Quieres agregar un Almacen?</a>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <form class="form-controler  border p-5">
+                <div class="form-group">
+                    <h5>Nombre</h5>
+                    <input id="NameSucursal" class="form-control" placeholder="Nombre" #newNombre readonly required>
+                </div>
+                <div class="form-group">
+                    <h5>Descripción</h5>
+                    <textarea class="form-control" rows="3" #newDescripcion readonly required  placeholder="Almacen de embutidos"></textarea>
+                </div>
+                <div class="form-group">
+                    <h5>Ubicación</h5>
+                    <input id="UbicacionSucursal" class="form-control" placeholder="R.D. La Romana, Meliza, Calle Segunda #15" #newUbicacion readonly required>
+                </div>
+                <div class="form-group">
+                    <h5>Teléfono</h5>
+                    <input class="form-control" #newTelefono readonly required maxlength="12" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" title="Formato: 000-000-0000">
+                </div>
+                <button  class="btn btn-primary" [routerLink]="['../ModifiAlmacenes']">Cancelar</button>
+                <button name="Editar" class="btn btn-danger">Eliminar</button>
+            </form>
+        </div>
+        <div class="col-6">
+            <h5 class="text-primary">Selecciona el Almacel</h5>
+            <form class="row">
+                <select  name="select" class="col-9 form-control">
+                    <option  >
+                        
+                    </option>
+                </select>
+            </form>
+        </div>
+    </div>
+</div>
