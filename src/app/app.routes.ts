@@ -7,6 +7,7 @@ import { VerUsuariosComponent } from './Componentes/Usuarios/ver-usuarios/ver-us
 import { MofiUsuariosComponent } from './Componentes/Usuarios/mofi-usuarios/mofi-usuarios.component';
 import { EditUsuariosComponent } from './Componentes/Usuarios/edit-usuarios/edit-usuarios.component';
 import { EliUsuariosComponent } from './Componentes/Usuarios/eli-usuarios/eli-usuarios.component';
+import { HomeSurcusalesComponent } from './Componentes/Sucursales/home-surcusales/home-surcusales.component';
 
 
 const app_routes: Routes = [
@@ -19,6 +20,9 @@ const app_routes: Routes = [
     { path: 'ModifiUsuarios', component: MofiUsuariosComponent},
     { path: 'EditUsuarios', component: EditUsuariosComponent},
     { path: 'EliUsuarios', component: EliUsuariosComponent},
+
+    //Sucursales
+    { path: 'HomeSucursales', component: HomeSurcusalesComponent},
 
 
 

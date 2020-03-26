@@ -14,7 +14,8 @@ import { AgregarUsuariosComponent } from './Componentes/Usuarios/agregar-usuario
 import { VerUsuariosComponent } from './Componentes/Usuarios/ver-usuarios/ver-usuarios.component';
 import { MofiUsuariosComponent } from './Componentes/Usuarios/mofi-usuarios/mofi-usuarios.component';
 import { EditUsuariosComponent } from './Componentes/Usuarios/edit-usuarios/edit-usuarios.component';
-import { EliUsuariosComponent } from './Componentes/Usuarios/eli-usuarios/eli-usuarios.component'
+import { EliUsuariosComponent } from './Componentes/Usuarios/eli-usuarios/eli-usuarios.component';
+import { HomeSurcusalesComponent } from './Componentes/Sucursales/home-surcusales/home-surcusales.component'
 
 
 
@@ -29,6 +30,7 @@ import { EliUsuariosComponent } from './Componentes/Usuarios/eli-usuarios/eli-us
     MofiUsuariosComponent,
     EditUsuariosComponent,
     EliUsuariosComponent,
+    HomeSurcusalesComponent,
 
   ],
   imports: [
