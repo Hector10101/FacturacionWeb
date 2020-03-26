@@ -22,6 +22,9 @@ import { EliAlmacenesComponent } from './Componentes/Almacenes/eli-almacenes/eli
 import { HomeProductosComponent } from './Componentes/UserSucursal/Productos/home-productos/home-productos.component';
 import { AgregarProductosComponent } from './Componentes/UserSucursal/Productos/agregar-productos/agregar-productos.component';
 import { VerProductosComponent } from './Componentes/UserSucursal/Productos/ver-productos/ver-productos.component';
+import { ModifiProductosComponent } from './Componentes/UserSucursal/Productos/modifi-productos/modifi-productos.component';
+import { EdiProductosComponent } from './Componentes/UserSucursal/Productos/edi-productos/edi-productos.component';
+import { EliProductosComponent } from './Componentes/UserSucursal/Productos/eli-productos/eli-productos.component';
 
 
 const app_routes: Routes = [
@@ -56,6 +59,12 @@ const app_routes: Routes = [
     { path: 'HomeProductos', component: HomeProductosComponent},
     { path: 'AgregarProductos', component: AgregarProductosComponent},
     { path: 'VerProductos', component: VerProductosComponent},
+    { path: 'ModifiProductos', component: ModifiProductosComponent},
+    { path: 'EditProductos', component: EdiProductosComponent},
+    { path: 'EliProductos', component: EliProductosComponent},
+
+
+
 
 
 
