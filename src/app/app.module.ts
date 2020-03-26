@@ -17,7 +17,11 @@ import { EditUsuariosComponent } from './Componentes/Usuarios/edit-usuarios/edit
 import { EliUsuariosComponent } from './Componentes/Usuarios/eli-usuarios/eli-usuarios.component';
 import { HomeSurcusalesComponent } from './Componentes/Sucursales/home-surcusales/home-surcusales.component';
 import { AgregarSucursalComponent } from './Componentes/Sucursales/agregar-sucursal/agregar-sucursal.component';
-import { VerSucursaliesComponent } from './Componentes/Sucursales/ver-sucursalies/ver-sucursalies.component'
+import { VerSucursaliesComponent } from './Componentes/Sucursales/ver-sucursalies/ver-sucursalies.component';
+import { ModifiSucursalesComponent } from './Componentes/Sucursales/modifi-sucursales/modifi-sucursales.component';
+import { EditSucursalComponent } from './Componentes/Sucursales/edit-sucursal/edit-sucursal.component';
+import { EliSucursalComponent } from './Componentes/Sucursales/eli-sucursal/eli-sucursal.component';
+
 
 
 
@@ -35,6 +39,9 @@ import { VerSucursaliesComponent } from './Componentes/Sucursales/ver-sucursalie
     HomeSurcusalesComponent,
     AgregarSucursalComponent,
     VerSucursaliesComponent,
+    ModifiSucursalesComponent,
+    EditSucursalComponent,
+    EliSucursalComponent,
 
   ],
   imports: [

@@ -10,6 +10,9 @@ import { EliUsuariosComponent } from './Componentes/Usuarios/eli-usuarios/eli-us
 import { HomeSurcusalesComponent } from './Componentes/Sucursales/home-surcusales/home-surcusales.component';
 import { AgregarSucursalComponent } from './Componentes/Sucursales/agregar-sucursal/agregar-sucursal.component';
 import { VerSucursaliesComponent } from './Componentes/Sucursales/ver-sucursalies/ver-sucursalies.component';
+import { ModifiSucursalesComponent } from './Componentes/Sucursales/modifi-sucursales/modifi-sucursales.component';
+import { EditSucursalComponent } from './Componentes/Sucursales/edit-sucursal/edit-sucursal.component';
+import { EliSucursalComponent } from './Componentes/Sucursales/eli-sucursal/eli-sucursal.component';
 
 
 const app_routes: Routes = [
@@ -27,6 +30,12 @@ const app_routes: Routes = [
     { path: 'HomeSucursales', component: HomeSurcusalesComponent},
     { path: 'AgregarSucursales', component: AgregarSucursalComponent},
     { path: 'VerSucursales', component: VerSucursaliesComponent},
+    { path: 'ModifiSucursales', component: ModifiSucursalesComponent},
+    { path: 'EditSucursales', component: EditSucursalComponent},
+    { path: 'EliSucursales', component: EliSucursalComponent},
+
+
+
 
 
 
