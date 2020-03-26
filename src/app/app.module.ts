@@ -35,6 +35,7 @@ import { ModifiProductosComponent } from './Componentes/UserSucursal/Productos/m
 import { EdiProductosComponent } from './Componentes/UserSucursal/Productos/edi-productos/edi-productos.component';
 import { EliProductosComponent } from './Componentes/UserSucursal/Productos/eli-productos/eli-productos.component';
 import { HomeEmpleadosComponent } from './Componentes/UserSucursal/Empleados/home-empleados/home-empleados.component';
+import { AgregarEmpleadosComponent } from './COmponentes/UserSucursal/Empleados/agregar-empleados/agregar-empleados.component';
 
 
 
@@ -71,6 +72,7 @@ import { HomeEmpleadosComponent } from './Componentes/UserSucursal/Empleados/hom
     EdiProductosComponent,
     EliProductosComponent,
     HomeEmpleadosComponent,
+    AgregarEmpleadosComponent,
    
 
   ],
