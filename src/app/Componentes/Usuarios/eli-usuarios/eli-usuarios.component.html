@@ -1,0 +1,48 @@
+<div class="container mt-4">
+    <h3>Eliminar Usuario</h3>
+    <a class="text-primary alert-link" [routerLink]="['../AgregarUsuarios']">¿Quieres agregar un Usuario?</a>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <form class="form-controler border p-5">
+                <div class="form-group">
+                    <h5>Nombre</h5>
+                    <input class="form-control" placeholder="Nombre"  #newNombre readonly required>
+                </div>
+                <div class="form-group">
+                    <h5>User</h5>
+                    <input class="form-control" placeholder="User"  #newUser readonly required>
+                </div>
+                <div class="form-group">
+                    <h5>Contraseña</h5>
+                    <input class="form-control" placeholder="Contraseña" type="password" readonly #newContraseña required>
+                </div>
+                <div class="form-group">
+                    <h5>Area</h5>
+                    <input class="form-control"  #newArea readonly required>
+                </div>
+                <div class="form-group">
+                    <h5>Nombre del area</h5>
+                    <input class="form-control"  #newNombreArea readonly required>
+                </div>
+                <button name="Editar" value="0"  class="btn btn-primary" [routerLink]="['../ModifiUsuarios']">Cancelar</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" >Eliminar</button>
+            </form>
+        </div>
+
+        <div class="col-6">
+            <h5 class="text-primary">Selecciona el Usuario</h5>
+            
+            <form class="row">
+                <select  name="select" class="col-9 form-control">
+
+                    <option >
+                        
+                    </option>
+                </select>
+                
+            </form>
+        </div>
+    </div>
+</div>

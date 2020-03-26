@@ -1,20 +1,22 @@
 <div class="container mt-4">
-    <h3>Nuevo Usuario</h3>
-    <hr />
+    <h3>Editar Usuario</h3>
+    <a class="text-primary alert-link" [routerLink]="['../AgregarUsuarios']">¿Quieres agregar un Usuario?</a>
+    <br />
+    <br />
     <div class="row">
         <div class="col-6">
-            <form class="form-controler p-4">
+            <form class="form-controler  border p-5">
                 <div class="form-group">
                     <h5>Nombre</h5>
-                    <input id="Name" class="form-control" placeholder="Nombre" #newNombre required>
+                    <input class="form-control" placeholder="Nombre"  #newNombre required>
                 </div>
                 <div class="form-group">
-                    <h5>Usuario</h5>
-                    <input id="User" class="form-control" placeholder="Usuario" #newUsuario required>
+                    <h5>User</h5>
+                    <input class="form-control" placeholder="User"  #newUser required>
                 </div>
                 <div class="form-group">
                     <h5>Contraseña</h5>
-                    <input class="form-control" placeholder="Contraseña" #newContraseña type="password" required>
+                    <input class="form-control" placeholder="Contraseña" type="password"  #newContraseña required>
                 </div>
                 <div class="form-group">
                     <h5>Area</h5>
@@ -32,10 +34,22 @@
                         <option>Almacen</option>
                     </select>
                 </div>
-                <button class="btn btn-primary" >Crear</button>
+                <button  class="btn btn-primary" [routerLink]="['../ModifiUsuarios']">Cancelar</button>
+                <button name="Editar" class="btn btn-danger" >Editar</button>
             </form>
         </div>
+
         <div class="col-6">
+            <h5 class="text-primary">Selecciona el Usuario</h5>
+            
+            <form class="row">
+                <select  name="select" class="col-9 form-control">
+                    <option  >
+                        
+                    </option>
+                </select>
+                
+            </form>
         </div>
     </div>
 </div>
