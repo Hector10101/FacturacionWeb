@@ -27,6 +27,7 @@ import { EdiProductosComponent } from './Componentes/UserSucursal/Productos/edi-
 import { EliProductosComponent } from './Componentes/UserSucursal/Productos/eli-productos/eli-productos.component';
 import { HomeEmpleadosComponent } from './Componentes/UserSucursal/Empleados/home-empleados/home-empleados.component';
 import { AgregarEmpleadosComponent } from './COmponentes/UserSucursal/Empleados/agregar-empleados/agregar-empleados.component';
+import { VerEmpleadosComponent } from './Componentes/UserSucursal/Empleados/ver-empleados/ver-empleados.component';
 
 
 const app_routes: Routes = [
@@ -68,6 +69,8 @@ const app_routes: Routes = [
         //Empleados
     { path: 'HomeEmpleados', component: HomeEmpleadosComponent},
     { path: 'AgregarEmpleados', component: AgregarEmpleadosComponent},
+    { path: 'VerEmpleados', component: VerEmpleadosComponent},
+
 
 
 
