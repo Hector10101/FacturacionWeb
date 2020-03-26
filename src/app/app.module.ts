@@ -27,6 +27,8 @@ import { VerAlmacenesComponent } from './Componentes/Almacenes/ver-almacenes/ver
 import { ModifiAlmacenesComponent } from './Componentes/Almacenes/modifi-almacenes/modifi-almacenes.component';
 import { EdiAlmacenesComponent } from './Componentes/Almacenes/edi-almacenes/edi-almacenes.component';
 import { EliAlmacenesComponent } from './Componentes/Almacenes/eli-almacenes/eli-almacenes.component';
+import { NavegacionSucuComponent } from './Componentes/UserSucursal/navegacion-sucu/navegacion-sucu.component';
+import { HomeProductosComponent } from './Componentes/UserSucursal/Productos/home-productos/home-productos.component';
 
 
 
@@ -54,6 +56,8 @@ import { EliAlmacenesComponent } from './Componentes/Almacenes/eli-almacenes/eli
     ModifiAlmacenesComponent,
     EdiAlmacenesComponent,
     EliAlmacenesComponent,
+    NavegacionSucuComponent,
+    HomeProductosComponent,
 
   ],
   imports: [
