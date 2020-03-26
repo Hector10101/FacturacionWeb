@@ -20,6 +20,7 @@ import { ModifiAlmacenesComponent } from './Componentes/Almacenes/modifi-almacen
 import { EdiAlmacenesComponent } from './Componentes/Almacenes/edi-almacenes/edi-almacenes.component';
 import { EliAlmacenesComponent } from './Componentes/Almacenes/eli-almacenes/eli-almacenes.component';
 import { HomeProductosComponent } from './Componentes/UserSucursal/Productos/home-productos/home-productos.component';
+import { AgregarProductosComponent } from './Componentes/UserSucursal/Productos/agregar-productos/agregar-productos.component';
 
 
 const app_routes: Routes = [
@@ -52,6 +53,8 @@ const app_routes: Routes = [
 
     //UserSucursal
     { path: 'HomeProductos', component: HomeProductosComponent},
+    { path: 'AgregarProductos', component: AgregarProductosComponent},
+
 
 
     //UserAlmacen
