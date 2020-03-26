@@ -37,6 +37,9 @@ import { EliProductosComponent } from './Componentes/UserSucursal/Productos/eli-
 import { HomeEmpleadosComponent } from './Componentes/UserSucursal/Empleados/home-empleados/home-empleados.component';
 import { AgregarEmpleadosComponent } from './COmponentes/UserSucursal/Empleados/agregar-empleados/agregar-empleados.component';
 import { VerEmpleadosComponent } from './Componentes/UserSucursal/Empleados/ver-empleados/ver-empleados.component';
+import { ModifiEmpleadosComponent } from './Componentes/UserSucursal/Empleados/modifi-empleados/modifi-empleados.component';
+import { EditEmpleadosComponent } from './Componentes/UserSucursal/Empleados/edit-empleados/edit-empleados.component';
+import { EliEmpleadosComponent } from './Componentes/UserSucursal/Empleados/eli-empleados/eli-empleados.component';
 
 
 
@@ -75,6 +78,9 @@ import { VerEmpleadosComponent } from './Componentes/UserSucursal/Empleados/ver-
     HomeEmpleadosComponent,
     AgregarEmpleadosComponent,
     VerEmpleadosComponent,
+    ModifiEmpleadosComponent,
+    EditEmpleadosComponent,
+    EliEmpleadosComponent,
    
 
   ],
