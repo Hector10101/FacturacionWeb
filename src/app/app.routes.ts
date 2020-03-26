@@ -8,6 +8,7 @@ import { MofiUsuariosComponent } from './Componentes/Usuarios/mofi-usuarios/mofi
 import { EditUsuariosComponent } from './Componentes/Usuarios/edit-usuarios/edit-usuarios.component';
 import { EliUsuariosComponent } from './Componentes/Usuarios/eli-usuarios/eli-usuarios.component';
 import { HomeSurcusalesComponent } from './Componentes/Sucursales/home-surcusales/home-surcusales.component';
+import { AgregarSucursalComponent } from './Componentes/Sucursales/agregar-sucursal/agregar-sucursal.component';
 
 
 const app_routes: Routes = [
@@ -23,6 +24,8 @@ const app_routes: Routes = [
 
     //Sucursales
     { path: 'HomeSucursales', component: HomeSurcusalesComponent},
+    { path: 'AgregarSucursales', component: AgregarSucursalComponent},
+
 
 
 
