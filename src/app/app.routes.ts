@@ -25,6 +25,7 @@ import { VerProductosComponent } from './Componentes/UserSucursal/Productos/ver-
 import { ModifiProductosComponent } from './Componentes/UserSucursal/Productos/modifi-productos/modifi-productos.component';
 import { EdiProductosComponent } from './Componentes/UserSucursal/Productos/edi-productos/edi-productos.component';
 import { EliProductosComponent } from './Componentes/UserSucursal/Productos/eli-productos/eli-productos.component';
+import { HomeEmpleadosComponent } from './Componentes/UserSucursal/Empleados/home-empleados/home-empleados.component';
 
 
 const app_routes: Routes = [
@@ -56,14 +57,15 @@ const app_routes: Routes = [
 
 
     //UserSucursal
+        //Productos
     { path: 'HomeProductos', component: HomeProductosComponent},
     { path: 'AgregarProductos', component: AgregarProductosComponent},
     { path: 'VerProductos', component: VerProductosComponent},
     { path: 'ModifiProductos', component: ModifiProductosComponent},
     { path: 'EditProductos', component: EdiProductosComponent},
     { path: 'EliProductos', component: EliProductosComponent},
-
-
+        //Empleados
+    { path: 'HomeEmpleados', component: HomeEmpleadosComponent},
 
 
 
