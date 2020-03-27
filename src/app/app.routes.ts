@@ -38,6 +38,7 @@ import { VerEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/v
 import { ModifEmpleadoAlmaComponent } from './Componentes/UserAlmacen/Empleados/modif-empleado-alma/modif-empleado-alma.component';
 import { EliEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/eli-empleados-alma/eli-empleados-alma.component';
 import { EdiEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/edi-empleados-alma/edi-empleados-alma.component';
+import { HomeProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/home-productos-alma/home-productos-alma.component';
 
 
 
@@ -98,9 +99,10 @@ const app_routes: Routes = [
     { path: 'VerEmpleadosAlma', component: VerEmpleadosAlmaComponent},
     { path: 'ModifiEmpleadosAlma', component: ModifEmpleadoAlmaComponent},
     { path: 'EditEmpleadosAlma', component: EdiEmpleadosAlmaComponent},
-
-    
     { path: 'EliEmpleadosAlma', component: EliEmpleadosAlmaComponent},
+        // Productos
+    { path: 'HomeProductosAlma', component: HomeProductosAlmaComponent},
+    
 
 
 
