@@ -44,6 +44,7 @@ import { VerProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/v
 import { ModifiProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/modifi-productos-alma/modifi-productos-alma.component';
 import { EliProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/eli-productos-alma/eli-productos-alma.component';
 import { EditProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/edit-productos-alma/edit-productos-alma.component';
+import { FacturarAlmaComponent } from './Componentes/UserAlmacen/Facturar/facturar-alma/facturar-alma.component';
 
 
 
@@ -112,6 +113,8 @@ const app_routes: Routes = [
     { path: 'ModifiProductosAlma', component: ModifiProductosAlmaComponent},
     { path: 'EditProductosAlma', component: EditProductosAlmaComponent},
     { path: 'EliProductosAlma', component: EliProductosAlmaComponent},
+        // Facturar
+    { path: 'HomeFacturarAlma', component: FacturarAlmaComponent},
 
 
 
