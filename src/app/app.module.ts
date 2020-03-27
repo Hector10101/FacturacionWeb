@@ -42,9 +42,7 @@ import { EditEmpleadosComponent } from './Componentes/UserSucursal/Empleados/edi
 import { EliEmpleadosComponent } from './Componentes/UserSucursal/Empleados/eli-empleados/eli-empleados.component';
 import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/facturar.component';
 import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-alma/navegacion-alma.component';
-
-
-
+import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/home-empleados-alma/home-empleados-alma.component';
 
 
 @NgModule({
@@ -52,6 +50,7 @@ import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-al
     AppComponent,
     NavegacionComponent,
     HomeComponent,
+    //
     HomeUsuariosComponent,
     AgregarUsuariosComponent,
     VerUsuariosComponent,
@@ -70,6 +69,8 @@ import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-al
     ModifiAlmacenesComponent,
     EdiAlmacenesComponent,
     EliAlmacenesComponent,
+
+    // Sucursales
     NavegacionSucuComponent,
     HomeProductosComponent,
     AgregarProductosComponent,
@@ -84,9 +85,11 @@ import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-al
     EditEmpleadosComponent,
     EliEmpleadosComponent,
     FacturarComponent,
-    NavegacionAlmaComponent,
-   
 
+    // Almacenes
+    NavegacionAlmaComponent,
+    HomeEmpleadosAlmaComponent,
+    
   ],
   imports: [
     BrowserModule,

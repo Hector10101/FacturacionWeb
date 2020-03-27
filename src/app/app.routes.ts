@@ -32,6 +32,7 @@ import { ModifiEmpleadosComponent } from './Componentes/UserSucursal/Empleados/m
 import { EliEmpleadosComponent } from './Componentes/UserSucursal/Empleados/eli-empleados/eli-empleados.component';
 import { EditEmpleadosComponent } from './Componentes/UserSucursal/Empleados/edit-empleados/edit-empleados.component';
 import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/facturar.component';
+import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/home-empleados-alma/home-empleados-alma.component';
 
 
 const app_routes: Routes = [
@@ -86,6 +87,7 @@ const app_routes: Routes = [
 
 
     // UserAlmacen
+    { path: 'HomeEmpleadosAlma', component: HomeEmpleadosAlmaComponent},
 
 
 
