@@ -43,6 +43,10 @@ import { EliEmpleadosComponent } from './Componentes/UserSucursal/Empleados/eli-
 import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/facturar.component';
 import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-alma/navegacion-alma.component';
 import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/home-empleados-alma/home-empleados-alma.component';
+import { AgregarEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/agregar-empleados-alma/agregar-empleados-alma.component';
+
+
+
 
 
 @NgModule({
@@ -89,6 +93,8 @@ import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/
     // Almacenes
     NavegacionAlmaComponent,
     HomeEmpleadosAlmaComponent,
+    AgregarEmpleadosAlmaComponent,
+  
     
   ],
   imports: [

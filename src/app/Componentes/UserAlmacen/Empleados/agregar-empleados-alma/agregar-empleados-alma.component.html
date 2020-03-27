@@ -1,0 +1,52 @@
+<div class="container mt-4">
+    <h3>Nuevo Empleado</h3>
+    <hr />
+    <div class="row">
+        <div class="col-6">
+            <form class="form-controler p-4">
+                <div class="form-group">
+                    <h5>Nombre</h5>
+                    <input id="NameEmpleado" class="form-control" placeholder="Nombre" #newNombre required>
+                </div>
+                <div class="form-group">
+                    <h5>Apellido</h5>
+                    <input id="ApellidoEmpleado" class="form-control" #newApellido placeholder="Apellido" required>
+                </div>
+                <div class="form-group">
+                    <h5>Fecha de Nacimiento</h5>
+                    <input class="form-control" #newFechaNacimiento required type="date">
+                </div>
+                <div class="form-group">
+                    <h5>Fecha de Ingreso</h5>
+                    <input class="form-control" #newFechaNacimiento required type="date">
+                </div>
+                <div class="form-group">
+                    <h5>Cedula</h5>
+                    <input class="form-control" #newCedula required maxlength="13" id="Cedula" placeholder="000-0000000-0" pattern="[0-9]{3}[ -][0-9]{7}[ -][0-9]{1}" title="Formato: 000-0000000-0">
+                </div>
+                <div class="form-group">
+                    <h5>Teléfono</h5>
+                    <input class="form-control" #newTelefono required maxlength="12" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" title="Formato: 000-000-0000">
+                </div>
+                <div class="form-group">
+                    <h5>Puesto</h5>
+                    <input id="CargoEmpleado" class="form-control" #newApellido placeholder="Empacador" required>
+                </div>
+                <div class="form-group">
+                    <h5>Sexo</h5>
+                    <div class="form-check radio-green">
+                        <input type="radio" class="form-check-input" id="radioGreen1" name="Sexo" checked>
+                        <label class="form-check-label" for="radioGreen1">M</label>
+                    </div>
+                    <div class="form-check radio-green">
+                        <input type="radio" class="form-check-input" id="radioGreen2" name="Sexo" >
+                        <label class="form-check-label" for="radioGreen2">F</label>
+                    </div>
+                </div>
+                <button class="btn btn-primary" >Agregar</button>
+            </form>
+        </div>
+        <div class="col-6">
+        </div>
+    </div>
+</div>
