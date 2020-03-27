@@ -31,6 +31,7 @@ import { VerEmpleadosComponent } from './Componentes/UserSucursal/Empleados/ver-
 import { ModifiEmpleadosComponent } from './Componentes/UserSucursal/Empleados/modifi-empleados/modifi-empleados.component';
 import { EliEmpleadosComponent } from './Componentes/UserSucursal/Empleados/eli-empleados/eli-empleados.component';
 import { EditEmpleadosComponent } from './Componentes/UserSucursal/Empleados/edit-empleados/edit-empleados.component';
+import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/facturar.component';
 
 
 const app_routes: Routes = [
@@ -76,6 +77,10 @@ const app_routes: Routes = [
     { path: 'ModifiEmpleados', component: ModifiEmpleadosComponent},
     { path: 'EditEmpleados', component: EditEmpleadosComponent},
     { path: 'EliEmpleados', component: EliEmpleadosComponent},
+
+        //Facturar
+    { path: 'HomeFacturar', component: FacturarComponent},
+    
 
 
 
