@@ -34,6 +34,7 @@ import { EditEmpleadosComponent } from './Componentes/UserSucursal/Empleados/edi
 import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/facturar.component';
 import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/home-empleados-alma/home-empleados-alma.component';
 import { AgregarEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/agregar-empleados-alma/agregar-empleados-alma.component';
+import { VerEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/ver-empleados-alma/ver-empleados-alma.component';
 
 
 
@@ -91,6 +92,8 @@ const app_routes: Routes = [
     // UserAlmacen
     { path: 'HomeEmpleadosAlma', component: HomeEmpleadosAlmaComponent},
     { path: 'AgregarEmpleadosAlma', component: AgregarEmpleadosAlmaComponent},
+    { path: 'VerEmpleadosAlma', component: VerEmpleadosAlmaComponent},
+
 
 
 

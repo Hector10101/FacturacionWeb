@@ -44,6 +44,7 @@ import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/
 import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-alma/navegacion-alma.component';
 import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/home-empleados-alma/home-empleados-alma.component';
 import { AgregarEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/agregar-empleados-alma/agregar-empleados-alma.component';
+import { VerEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/ver-empleados-alma/ver-empleados-alma.component';
 
 
 
@@ -94,6 +95,7 @@ import { AgregarEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Emplead
     NavegacionAlmaComponent,
     HomeEmpleadosAlmaComponent,
     AgregarEmpleadosAlmaComponent,
+    VerEmpleadosAlmaComponent,
   
     
   ],
