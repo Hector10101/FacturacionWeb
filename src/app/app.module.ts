@@ -45,6 +45,9 @@ import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-al
 import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/home-empleados-alma/home-empleados-alma.component';
 import { AgregarEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/agregar-empleados-alma/agregar-empleados-alma.component';
 import { VerEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/ver-empleados-alma/ver-empleados-alma.component';
+import { ModifEmpleadoAlmaComponent } from './Componentes/UserAlmacen/Empleados/modif-empleado-alma/modif-empleado-alma.component';
+import { EliEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/eli-empleados-alma/eli-empleados-alma.component';
+import { EdiEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/edi-empleados-alma/edi-empleados-alma.component';
 
 
 
@@ -96,6 +99,9 @@ import { VerEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/v
     HomeEmpleadosAlmaComponent,
     AgregarEmpleadosAlmaComponent,
     VerEmpleadosAlmaComponent,
+    ModifEmpleadoAlmaComponent,
+    EliEmpleadosAlmaComponent,
+    EdiEmpleadosAlmaComponent,
   
     
   ],

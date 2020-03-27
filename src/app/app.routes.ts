@@ -35,6 +35,9 @@ import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/
 import { HomeEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/home-empleados-alma/home-empleados-alma.component';
 import { AgregarEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/agregar-empleados-alma/agregar-empleados-alma.component';
 import { VerEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/ver-empleados-alma/ver-empleados-alma.component';
+import { ModifEmpleadoAlmaComponent } from './Componentes/UserAlmacen/Empleados/modif-empleado-alma/modif-empleado-alma.component';
+import { EliEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/eli-empleados-alma/eli-empleados-alma.component';
+import { EdiEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/edi-empleados-alma/edi-empleados-alma.component';
 
 
 
@@ -93,6 +96,14 @@ const app_routes: Routes = [
     { path: 'HomeEmpleadosAlma', component: HomeEmpleadosAlmaComponent},
     { path: 'AgregarEmpleadosAlma', component: AgregarEmpleadosAlmaComponent},
     { path: 'VerEmpleadosAlma', component: VerEmpleadosAlmaComponent},
+    { path: 'ModifiEmpleadosAlma', component: ModifEmpleadoAlmaComponent},
+    { path: 'EditEmpleadosAlma', component: EdiEmpleadosAlmaComponent},
+
+    
+    { path: 'EliEmpleadosAlma', component: EliEmpleadosAlmaComponent},
+
+
+
 
 
 
