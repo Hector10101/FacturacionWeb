@@ -36,8 +36,7 @@ import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/
 
 const app_routes: Routes = [
     { path: 'home', component: HomeComponent},
-    
-    //Usuarios
+        // Usuarios
     { path: 'HomeUsuarios', component: HomeUsuariosComponent},
     { path: 'AgregarUsuarios', component: AgregarUsuariosComponent},
     { path: 'VerUsuarios', component: VerUsuariosComponent},
@@ -45,7 +44,7 @@ const app_routes: Routes = [
     { path: 'EditUsuarios', component: EditUsuariosComponent},
     { path: 'EliUsuarios', component: EliUsuariosComponent},
 
-    //Sucursales
+    // Sucursales
     { path: 'HomeSucursales', component: HomeSurcusalesComponent},
     { path: 'AgregarSucursales', component: AgregarSucursalComponent},
     { path: 'VerSucursales', component: VerSucursaliesComponent},
@@ -53,7 +52,7 @@ const app_routes: Routes = [
     { path: 'EditSucursales', component: EditSucursalComponent},
     { path: 'EliSucursales', component: EliSucursalComponent},
 
-    //Almacenes
+    // Almacenes
     { path: 'HomeAlmacenes', component: HomeAlmacenesComponent},
     { path: 'AgregarAlmacenes', component: AgregarAlmacenesComponent},
     { path: 'VerAlmacenes', component: VerAlmacenesComponent},
@@ -62,15 +61,15 @@ const app_routes: Routes = [
     { path: 'EliAlmacenes', component: EliAlmacenesComponent},
 
 
-    //UserSucursal
-        //Productos
+    // UserSucursal
+        // Productos
     { path: 'HomeProductos', component: HomeProductosComponent},
     { path: 'AgregarProductos', component: AgregarProductosComponent},
     { path: 'VerProductos', component: VerProductosComponent},
     { path: 'ModifiProductos', component: ModifiProductosComponent},
     { path: 'EditProductos', component: EdiProductosComponent},
     { path: 'EliProductos', component: EliProductosComponent},
-        //Empleados
+        // Empleados
     { path: 'HomeEmpleados', component: HomeEmpleadosComponent},
     { path: 'AgregarEmpleados', component: AgregarEmpleadosComponent},
     { path: 'VerEmpleados', component: VerEmpleadosComponent},
@@ -78,19 +77,15 @@ const app_routes: Routes = [
     { path: 'EditEmpleados', component: EditEmpleadosComponent},
     { path: 'EliEmpleados', component: EliEmpleadosComponent},
 
-        //Facturar
+        // Facturar
     { path: 'HomeFacturar', component: FacturarComponent},
-    
 
 
 
 
 
 
-
-
-
-    //UserAlmacen
+    // UserAlmacen
 
 
 

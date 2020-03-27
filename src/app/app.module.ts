@@ -41,6 +41,7 @@ import { ModifiEmpleadosComponent } from './Componentes/UserSucursal/Empleados/m
 import { EditEmpleadosComponent } from './Componentes/UserSucursal/Empleados/edit-empleados/edit-empleados.component';
 import { EliEmpleadosComponent } from './Componentes/UserSucursal/Empleados/eli-empleados/eli-empleados.component';
 import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/facturar.component';
+import { NavegacionAlmaComponent } from './Componentes/UserAlmacen/navegacion-alma/navegacion-alma.component';
 
 
 
@@ -83,6 +84,7 @@ import { FacturarComponent } from './Componentes/UserSucursal/Facturar/facturar/
     EditEmpleadosComponent,
     EliEmpleadosComponent,
     FacturarComponent,
+    NavegacionAlmaComponent,
    
 
   ],
