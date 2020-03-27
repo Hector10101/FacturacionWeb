@@ -51,6 +51,9 @@ import { EdiEmpleadosAlmaComponent } from './Componentes/UserAlmacen/Empleados/e
 import { HomeProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/home-productos-alma/home-productos-alma.component';
 import { AgregarProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/agregar-productos-alma/agregar-productos-alma.component';
 import { VerProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/ver-productos-alma/ver-productos-alma.component';
+import { ModifiProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/modifi-productos-alma/modifi-productos-alma.component';
+import { EditProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/edit-productos-alma/edit-productos-alma.component';
+import { EliProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/eli-productos-alma/eli-productos-alma.component';
 
 
 
@@ -108,6 +111,9 @@ import { VerProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/v
     HomeProductosAlmaComponent,
     AgregarProductosAlmaComponent,
     VerProductosAlmaComponent,
+    ModifiProductosAlmaComponent,
+    EditProductosAlmaComponent,
+    EliProductosAlmaComponent,
   
     
   ],
