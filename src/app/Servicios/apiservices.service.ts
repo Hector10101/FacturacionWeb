@@ -12,7 +12,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class APIservicesService {
   private allowCors= 'https://cors-anywhere.herokuapp.com/';
-  private api ='http://facturacionweb-001-site1.btempurl.com/api/';
+  private api ='http://facturacionweb-001-site1.btempurl.com/api';
 
 
   public usuario: usuarios = { Id: 0, Nombre: "", User: "", Password: "", Area: "", NombredelArea: ""};
@@ -28,14 +28,14 @@ export class APIservicesService {
   }
   //User Services
   GetUser(): Observable<usuarios> {
-    return this.http.get<usuarios>( `${this.allowCors}${this.api}/usuario/`)
+    return this.http.get<usuarios>(`${this.allowCors}${this.api}/usuario/`)
     .pipe(
       retry(1),
 
     )
   }
   GetJustOneUser(id: string){
-    return this.http.get<usuarios>( `${this.allowCors}${this.api}/usuario/${id}`)
+    return this.http.get<usuarios>(`${this.allowCors}${this.api}/usuario/${id}`)
     .pipe(
       retry(1),
     )

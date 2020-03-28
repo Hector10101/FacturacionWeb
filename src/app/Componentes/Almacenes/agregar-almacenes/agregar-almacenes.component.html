@@ -3,7 +3,7 @@
     <hr />
     <div class="row">
         <div class="col-6">
-            <form class="form-controler p-4">
+            <form class="form-controler p-4" (submit)="PostAlmacen(newNombre,newDescripcion,newUbicacion,newTelefono)">
                 <div class="form-group">
                     <h5>Nombre</h5>
                     <input id="NameSucursal" class="form-control" placeholder="Nombre" #newNombre required>
