@@ -24,7 +24,7 @@ export class AgregarProductosComponent implements OnInit {
     
     const Producto = {
     Nombre: newNombre.value,
-    Descripción: newDescripcion.value,
+    Descripcion: newDescripcion.value,
     Cantidad: newCantidad.value,
     Fecha_caducidad: newFechaCaducidad.value,
     PrecioUnitario: newPrecioUnitario.value,

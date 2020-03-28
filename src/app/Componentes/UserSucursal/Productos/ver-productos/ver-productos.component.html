@@ -15,7 +15,15 @@
                 <th>Precio Total</th>
             </thead>
             <tbody>
-                
+                <tr *ngFor="let producto of Productos;let indice=index">
+                    <td>{{indice+1}}</td>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.descripcion}}</td>
+                    <td>{{producto.cantidad}}</td>
+                    <td>{{producto.fecha_caducidad}}</td>
+                    <td>{{producto.precioUnitario}}</td>
+                    <td>{{producto.precioTotal}}</td>
+                </tr>
             </tbody>
         </table>
      </div>

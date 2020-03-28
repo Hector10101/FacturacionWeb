@@ -35,7 +35,7 @@ export class EliProductosAlmaComponent implements OnInit {
         if(this.seleccionado == producto.id){
           this.ID = producto.id;
           this.Nombre = producto.nombre;
-          this.Descricipcion = producto.descripción;
+          this.Descricipcion = producto.descripcion;
           this.Cantidad = producto.cantidad;
           this.FechaCaducidad = producto.fecha_caducidad;
           this.PrecioUnitario = producto.precioUnitario;

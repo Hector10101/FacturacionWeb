@@ -43,7 +43,7 @@ export class EdiProductosComponent implements OnInit {
       if(this.seleccionado == producto.id){
         this.ID = producto.id;
         this.Nombre = producto.nombre;
-        this.Descricipcion = producto.descripción;
+        this.Descricipcion = producto.descripcion;
         this.Cantidad = producto.cantidad;
         this.FechaCaducidad = producto.fecha_caducidad;
         this.PrecioUnitario = producto.precioUnitario;
@@ -60,7 +60,7 @@ export class EdiProductosComponent implements OnInit {
           const Producto = {
             Id: this.seleccionado, 
             Nombre: newNombre.value,
-            Descripción: newDescripcion.value,
+            Descripcion: newDescripcion.value,
             Cantidad: newCantidad.value,
             Fecha_caducidad: newFechaCaducidad.value,
             PrecioUnitario: newPrecioUnitario.value,

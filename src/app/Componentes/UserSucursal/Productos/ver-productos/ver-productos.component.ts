@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APIservicesService } from 'src/app/Servicios/apiservices.service';
 
 @Component({
   selector: 'app-ver-productos',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ver-productos.component.scss']
 })
 export class VerProductosComponent implements OnInit {
-
-  constructor() { }
+  public Productos: any = [];
+  constructor(private APIServices: APIservicesService) { }
 
   ngOnInit(): void {
+    this.GetProducto();
   }
-
+  GetProducto(){
+    this.APIServices.GetProducto().subscribe((data: {}) => {
+        this.Productos = data;
+        console.log(this.Productos);
+    })
+    }
 }
