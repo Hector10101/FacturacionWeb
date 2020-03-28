@@ -92,7 +92,7 @@ export class APIservicesService {
         retry(1),
       )
     }  
-    DeleteAlmacen(id){
+    DeleteAlmacen(id: string){
       return this.http.delete<almacenes>(`${this.allowCors}${this.api}/almacen/${id}`, this.httpOptions)
       .pipe(
         retry(1),

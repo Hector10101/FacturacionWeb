@@ -26,6 +26,11 @@ export class AgregarUsuariosComponent implements OnInit {
     };
     this.APIServices.PostUser(usuario).subscribe((registro: {}) => {
       console.log(registro);
+      newNombre.value = '';
+      newUsuario.value = '';
+      newPassword.value = '';
+      newArea.value = '';
+      newNombreArea.value = '';
     })
   }
 

@@ -24,6 +24,10 @@ export class AgregarAlmacenesComponent implements OnInit {
     };
     this.APIServices.PostAlmacen(almacen).subscribe((registro: {}) => {
       console.log(registro);
+      newNombre.value = '';
+      newDescripcion.value = '';
+      newUbicacion.value = '';
+      newTelefono.value = '';
     })
   }
   

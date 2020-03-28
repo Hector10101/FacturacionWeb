@@ -23,6 +23,9 @@ export class AgregarSucursalComponent implements OnInit {
     };
     this.APIServices.PostSucursal(sucursal).subscribe((registro: {}) => {
       console.log(registro);
+      newUbicacion.value='';
+      newNombre.value='';
+      newTelefono.value='';
     })
   }
 

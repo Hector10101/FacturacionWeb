@@ -12,7 +12,12 @@
                 <th>Teléfono</th>
             </thead>
             <tbody>
-                
+                <tr *ngFor="let sucursal of Sucursales">
+                    <td>{{sucursal.id}}</td>
+                    <td>{{sucursal.nombre}}</td>
+                    <td>{{sucursal.ubicacion}}</td>
+                    <td>{{sucursal.telefono}}</td>
+                </tr>
             </tbody>
         </table>
         

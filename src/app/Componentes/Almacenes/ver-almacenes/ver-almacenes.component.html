@@ -13,7 +13,13 @@
                 <th>Teléfono</th>
             </thead>
             <tbody>
-                
+                <tr *ngFor="let almacen of Almacenes">
+                    <td>{{almacen.id}}</td>
+                    <td>{{almacen.nombre}}</td>
+                    <td>{{almacen.descripcion}}</td>
+                    <td>{{almacen.ubicacion}}</td>
+                    <td>{{almacen.telefono}}</td>
+                </tr>
             </tbody>
         </table>
         

@@ -10,6 +10,8 @@ import { NavegacionComponent } from './Componentes/navegacion/navegacion.compone
 import { HomeComponent } from './Componentes/home/home.component';
 
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
+
 
 import {HomeUsuariosComponent} from './Componentes/Usuarios/home-usuarios/home-usuarios.component';
 import { AgregarUsuariosComponent } from './Componentes/Usuarios/agregar-usuarios/agregar-usuarios.component';
@@ -125,6 +127,7 @@ import { FacturarAlmaComponent } from './Componentes/UserAlmacen/Facturar/factur
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     app_routing
   ],
   providers: [],
