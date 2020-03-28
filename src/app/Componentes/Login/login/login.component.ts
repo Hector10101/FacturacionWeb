@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RouterModule, Routes, Router } from '@angular/router';
 import { APIservicesService } from 'src/app/Servicios/apiservices.service';
 import { Route } from '@angular/compiler/src/core';
 import { User } from 'src/app/Modelos/user.models';
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   public Area : string;
   public NombreArea: string;
 
-  constructor(private APIServices: APIservicesService) { }
+  constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
     this.GetUser();
@@ -28,6 +29,10 @@ export class LoginComponent implements OnInit {
         this.Usuarios = data;
         console.log(this.Usuarios);
     })
+    }
+
+    Goto(ruta) {
+      this.router.navigate(['/', ruta]);
     }
 
     LogIn(newUser:HTMLInputElement,newPassword:HTMLInputElement){
@@ -41,8 +46,14 @@ export class LoginComponent implements OnInit {
           this.NombreArea = usuario.nombredelArea;
           let u: User = {area: this.Area};        
           this.APIServices.setUserLoggedIn(u);
-    
+
           console.log(u);
+              if(this.Area=="Almacen"){
+              this.Goto('HomeAlmacenes');
+            }
+            if(this.Area=="Sucursal"){
+              this.Goto('HomeSucursales');
+            }
         }
       }
      
