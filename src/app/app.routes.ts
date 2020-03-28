@@ -118,20 +118,6 @@ const app_routes: Routes = [
 
 
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
