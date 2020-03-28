@@ -13,8 +13,8 @@
                 <th>Teléfono</th>
             </thead>
             <tbody>
-                <tr *ngFor="let almacen of Almacenes">
-                    <td>{{almacen.id}}</td>
+                <tr  *ngFor="let almacen of Almacenes;let indice=index">
+                    <td>{{indice+1}}</td>
                     <td>{{almacen.nombre}}</td>
                     <td>{{almacen.descripcion}}</td>
                     <td>{{almacen.ubicacion}}</td>

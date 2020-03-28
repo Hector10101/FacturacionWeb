@@ -23,18 +23,17 @@
                     <input class="form-control" value="{{Telefono}}" #newTelefono readonly required maxlength="12" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" title="Formato: 000-000-0000">
                 </div>
                 <button  class="btn btn-primary" [routerLink]="['../ModifiAlmacenes']">Cancelar</button>
-                <button name="Editar" class="btn btn-danger" (click)="DeleteAlmacen()">Eliminar</button>
+                <button name="Editar" type="submit" class="btn btn-danger" (click)="DeleteAlmacen()">Eliminar</button>
             </form>
         </div>
         <div class="col-6">
             <h5 class="text-primary">Selecciona el Almacen</h5>
             <form class="row">
-                <select  name="select"  [(ngModel)] = "seleccionado" class="col-9 form-control"  (change)="GetAlmacenSelected()">
-                    <option   [value]="almacen.id" *ngFor="let almacen of Almacenes" >
+                <select  name="select"  [(ngModel)] = "seleccionado" class="col-9 form-control"  (click)="GetAlmacenSelected()">
+                    <option   [value]="almacen.id" *ngFor="let almacen of Almacenes">
                         {{almacen.nombre}}
                     </option>
                 </select>
-                {{seleccionado}}
             </form>
         </div>
     </div>

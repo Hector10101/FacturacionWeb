@@ -14,8 +14,8 @@
                 <th>Nombre del Area</th>
             </thead>
             <tbody>
-                <tr *ngFor="let usuario of Usuarios">
-                    <td>{{usuario.id}}</td>
+                <tr *ngFor="let usuario of Usuarios;let indice=index">
+                    <td>{{indice+1}}</td>
                     <td>{{usuario.nombre}}</td>
                     <td>{{usuario.user}}</td>
                     <td>{{usuario.password}}</td>

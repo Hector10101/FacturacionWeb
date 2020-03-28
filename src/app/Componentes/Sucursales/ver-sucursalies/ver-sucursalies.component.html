@@ -12,8 +12,8 @@
                 <th>Teléfono</th>
             </thead>
             <tbody>
-                <tr *ngFor="let sucursal of Sucursales">
-                    <td>{{sucursal.id}}</td>
+                <tr *ngFor="let sucursal of Sucursales;let indice=index">
+                    <td>{{indice+1}}</td>
                     <td>{{sucursal.nombre}}</td>
                     <td>{{sucursal.ubicacion}}</td>
                     <td>{{sucursal.telefono}}</td>
