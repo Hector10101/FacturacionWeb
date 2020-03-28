@@ -60,6 +60,7 @@ import { EditProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/
 import { EliProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/eli-productos-alma/eli-productos-alma.component';
 import { FacturarAlmaComponent } from './Componentes/UserAlmacen/Facturar/facturar-alma/facturar-alma.component';
 import { LoginComponent } from './Componentes/Login/login/login.component';
+import { User } from './Modelos/user.models';
 
 
 
@@ -130,7 +131,7 @@ import { LoginComponent } from './Componentes/Login/login/login.component';
     FormsModule,
     app_routing
   ],
-  providers: [],
+  providers: [User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,6 @@
+export class User {
+    /*username: string;   
+    nombre: string;*/
+    area: string;
+
+  }

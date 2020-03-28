@@ -8,6 +8,7 @@ import { productos } from '../Modelos/productos';
 import { HttpClientModule, HttpClient, HttpHeaders  } from "@angular/common/http";
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { User } from '../Modelos/user.models';
 
 @Injectable({
   providedIn: 'root'
@@ -17,17 +18,50 @@ export class APIservicesService {
   private api ='http://facturacionweb-001-site1.btempurl.com/api';
 
 
+  private userLogged;
+  public usserLogged:User;
+
+
   public usuario: usuarios = { Id: 0, Nombre: "", User: "", Password: "", Area: "", NombredelArea: ""};
   public almacen: almacenes = { Id: 0, Nombre: "", Descripcion: "", Ubicacion: "", Telefono: ""};
   public sucursal: sucursales = { Id: 0, Nombre: "", Ubicacion: "", Telefono: ""};
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.userLogged = false;
+
+   }
 
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
+  //Login Services
+  setUserLoggedIn(user:User) {
+    this.userLogged = true;
+    this.usserLogged = user;
+    localStorage.setItem('UserLogged', JSON.stringify(user));
+  
+  }
+
+  getUserLoggedIn() {
+    let e= JSON.parse(localStorage.getItem('UserLogged'));
+  	return e.area;
+  }
+
+
+
+
+
+
+                              /**
+                               * 
+                               * End Login Settings
+                               * 
+                               */ 
+
+
+
   //User Services
   GetUser(): Observable<usuarios> {
     return this.http.get<usuarios>(`${this.allowCors}${this.api}/usuario/`)

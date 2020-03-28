@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIservicesService } from 'src/app/Servicios/apiservices.service';
+import {RouterModule, Routes, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edi-almacenes',
@@ -14,12 +15,21 @@ export class EdiAlmacenesComponent implements OnInit {
   public Telefono : string;
   public seleccionado: string;
   public Almacenes: any = [];
+  trustedUser= "Almacen";
 
-  constructor(private APIServices: APIservicesService) { }
+  constructor(private APIServices: APIservicesService,  private router: Router) { }
 
   ngOnInit(): void {
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
     this.GetAlmacen();
   }
+  Goto(ruta) {
+    this.router.navigate(['/', ruta]);
+  }
+
+
   GetAlmacenSelected(){
     for(let almacen of this.Almacenes){
       if(this.seleccionado == almacen.id){
