@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIservicesService } from 'src/app/Servicios/apiservices.service';
+import {RouterModule, Routes, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-productos-alma',
@@ -18,11 +19,20 @@ export class EditProductosAlmaComponent implements OnInit {
   public PrecioTotal: number;
   public seleccionado: string;
   
-  constructor(private APIServices: APIservicesService) { }
+  trustedUser= "Almacen";
+  constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
+    if((this.trustedUser !=this.APIServices.getUserLoggedIn())){
+      this.Goto('Login'); 
+    }
     this.GetProducto();
   }
+
+  Goto(ruta) {
+    this.router.navigate(['/', ruta]);
+  }
+
 
   CantidadTotal(newCantidad: HTMLInputElement, newPrecioUnitario: HTMLInputElement,){
     this.Cantidad =  parseInt(newCantidad.value);

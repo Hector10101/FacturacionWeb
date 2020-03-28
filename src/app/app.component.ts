@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APIservicesService } from 'src/app/Servicios/apiservices.service';
 
 
 
@@ -10,4 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'FacturacionWeb';
+
+  constructor(private APIServices: APIservicesService) { }
+
+  ngOnInit(): void {
+      this.APIServices.setUserLogIn();
+  }
+
 }

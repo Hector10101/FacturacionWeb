@@ -44,6 +44,12 @@ export class APIservicesService {
   
   }
 
+  setUserLogIn() {
+    this.userLogged = true;
+    localStorage.setItem('UserLogged', JSON.stringify("user"));
+  
+  }
+
   getUserLoggedIn() {
     let e= JSON.parse(localStorage.getItem('UserLogged'));
   	return e.area;

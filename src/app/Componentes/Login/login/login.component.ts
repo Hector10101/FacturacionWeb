@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
               this.Goto('HomeAlmacenes');
             }
             if(this.Area=="Sucursal"){
-              this.Goto('HomeSucursales');
+              this.Goto('VerProductos');
             }
         }
       }
