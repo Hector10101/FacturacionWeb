@@ -7,7 +7,7 @@ import { User } from 'src/app/Modelos/user.models';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'] 
 })
 export class LoginComponent implements OnInit {
   public Usuarios: any = [];
@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.GetUser();
+   console.log(this.APIServices.getUserLoggedIn());
   }
   GetUser(){
     this.APIServices.GetUser().subscribe((data: {}) => {

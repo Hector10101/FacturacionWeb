@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIservicesService } from 'src/app/Servicios/apiservices.service';
+import {RouterModule, Routes, Router } from '@angular/router';
 
 @Component({
   selector: 'app-agregar-almacenes',
@@ -8,10 +9,17 @@ import { APIservicesService } from 'src/app/Servicios/apiservices.service';
 })
 export class AgregarAlmacenesComponent implements OnInit {
   public Almacenes: any = [];
-
-  constructor(private APIServices: APIservicesService) { }
+   trustedUser= "Almacen";
+  constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
+      if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+        this.Goto('Home'); 
+      }
+  }
+
+  Goto(ruta) {
+    this.router.navigate(['/', ruta]);
   }
  
   PostAlmacen(newNombre: HTMLInputElement,newDescripcion: HTMLInputElement,newUbicacion: HTMLInputElement,newTelefono: HTMLInputElement) {

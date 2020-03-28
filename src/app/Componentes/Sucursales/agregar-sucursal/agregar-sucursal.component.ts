@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIservicesService } from 'src/app/Servicios/apiservices.service';
+import {RouterModule, Routes, Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-agregar-sucursal',
@@ -8,10 +9,17 @@ import { APIservicesService } from 'src/app/Servicios/apiservices.service';
 })
 export class AgregarSucursalComponent implements OnInit {
   public Sucursales: any = [];
-
-  constructor(private APIServices: APIservicesService) { }
+  trustedUser= "Almacen";
+  constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
+  }
+
+  Goto(ruta) {
+    this.router.navigate(['/', ruta]);
   }
 
   PostSucursal(newNombre: HTMLInputElement,newUbicacion: HTMLInputElement,newTelefono: HTMLInputElement) {
@@ -20,7 +28,7 @@ export class AgregarSucursalComponent implements OnInit {
     Ubicacion: newUbicacion.value,
     Telefono: newTelefono.value,
 
-    };
+    }; 
     this.APIServices.PostSucursal(sucursal).subscribe((registro: {}) => {
       console.log(registro);
       newUbicacion.value='';
