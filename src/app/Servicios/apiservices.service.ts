@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { usuarios } from '../Modelos/usuarios';
 import { almacenes } from '../Modelos/almacenes';
 import { sucursales } from '../Modelos/sucursales';
+import { empleados } from '../Modelos/empleados';
+import { productos } from '../Modelos/productos';
 
 import { HttpClientModule, HttpClient, HttpHeaders  } from "@angular/common/http";
 import { Observable, throwError } from 'rxjs';
@@ -137,8 +139,84 @@ export class APIservicesService {
         retry(1),
       )
     }
-                                              /*END Sucursal Services*/
+                                              /*END Sucursal Services
+                                              *
+                                              *
+                                              */
 
+  //Empleado Services                                       
+  GetEmpleado(): Observable<empleados> {
+    return this.http.get<empleados>( `${this.allowCors}${this.api}/empleado/`)
+    .pipe(
+      retry(1),
 
+    )
+  }
+  GetJustOneEmpleado(id: string){
+    return this.http.get<empleados>( `${this.allowCors}${this.api}/empleado/${id}`)
+    .pipe(
+      retry(1),
+    )
+  }
+  PostEmpleado(empleado): Observable<empleados> {
+    return this.http.post<empleados>(`${this.allowCors}${this.api}/empleado/`, JSON.stringify(empleado), this.httpOptions)
+    .pipe(
+      retry(1),
+      
+    )
+  }
+  UpdateEmpleado(id, empleado): Observable<empleados> {
+    return this.http.put<empleados>(`${this.allowCors}${this.api}/empleado/${id}`, JSON.stringify(empleado), this.httpOptions)
+    .pipe(
+      retry(1),
+    )
+  }  
+  DeleteEmpleado(id){
+    return this.http.delete<empleados>(`${this.allowCors}${this.api}/empleado/${id}`, this.httpOptions)
+    .pipe(
+      retry(1),
+    )
+  }
+                                       /*END Empleado Services
+                                              *
+                                              *
+                                              */
 
+  //Producto Services                                       
+  GetProducto(): Observable<productos> {
+    return this.http.get<productos>( `${this.allowCors}${this.api}/producto/`)
+    .pipe(
+      retry(1),
+
+    )
+  }
+  GetJustOneProducto(id: string){
+    return this.http.get<productos>( `${this.allowCors}${this.api}/producto/${id}`)
+    .pipe(
+      retry(1),
+    )
+  }
+  PostProducto(producto): Observable<productos> {
+    return this.http.post<productos>(`${this.allowCors}${this.api}/producto/`, JSON.stringify(producto), this.httpOptions)
+    .pipe(
+      retry(1),
+      
+    )
+  }
+  UpdateProducto(id, producto): Observable<productos> {
+    return this.http.put<productos>(`${this.allowCors}${this.api}/producto/${id}`, JSON.stringify(producto), this.httpOptions)
+    .pipe(
+      retry(1),
+    )
+  }  
+  DeleteProducto(id){
+    return this.http.delete<productos>(`${this.allowCors}${this.api}/producto/${id}`, this.httpOptions)
+    .pipe(
+      retry(1),
+    )
+  }
+                                       /*END Producto Services
+                                              *
+                                              *
+                                              */
 }
