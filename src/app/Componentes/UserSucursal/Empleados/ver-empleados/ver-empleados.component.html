@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <h3>Empleados</h3>
-    <a class="text-primary alert-link" [routerLink]="['../AgregarEmpleados']">¿Quieres agregar un Empleado?</a>
+    <a class="text-primary alert-link" [routerLink]="['../AgregarEmpleadosAlma']">¿Quieres agregar un Empleado?</a>
     <br />
     <br />
      <div>            
@@ -17,7 +17,17 @@
                 <th>Sexo</th>
             </thead>
             <tbody>
-                
+                <tr  *ngFor="let empleado of Empleados;let indice=index">
+                    <td>{{indice+1}}</td>
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.fecha_Nac}}</td>
+                    <td>{{empleado.fecha_Ing}}</td>
+                    <td>{{empleado.cedula}}</td>
+                    <td>{{empleado.telefono}}</td>
+                    <td>{{empleado.puesto}}</td>
+                    <td>{{empleado.sexo}}</td>
+                </tr>
             </tbody>
         </table>
      </div>

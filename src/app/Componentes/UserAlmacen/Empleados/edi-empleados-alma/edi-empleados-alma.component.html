@@ -8,53 +8,53 @@
             <form class="form-controler  border p-5">
                 <div class="form-group">
                     <h5>Nombre</h5>
-                    <input id="NameEmpleado" class="form-control" placeholder="Nombre" #newNombre required>
+                    <input id="NameEmpleado" class="form-control" placeholder="Nombre" value="{{Nombre}}" #newNombre required>
                 </div>
                 <div class="form-group">
                     <h5>Apellido</h5>
-                    <input id="ApellidoEmpleado" class="form-control" #newApellido placeholder="Apellido" required>
+                    <input id="ApellidoEmpleado" class="form-control" #newApellido value="{{Apellido}}" placeholder="Apellido" required>
                 </div>
                 <div class="form-group">
                     <h5>Fecha de Nacimiento</h5>
-                    <input class="form-control" #newFechaNacimiento required type="date">
+                    <input class="form-control" #newFechaNacimiento value="{{Fecha_Nac}}" required type="date">
                 </div>
                 <div class="form-group">
                     <h5>Fecha de Ingreso</h5>
-                    <input class="form-control" #newFechaIngreso required type="date">
+                    <input class="form-control" #newFechaIngreso value="{{Fecha_Ing}}" required type="date">
                 </div>
                 <div class="form-group">
                     <h5>Cedula</h5>
-                    <input class="form-control" #newCedula required maxlength="13" id="Cedula" placeholder="000-0000000-0" pattern="[0-9]{3}[ -][0-9]{7}[ -][0-9]{1}" title="Formato: 000-0000000-0">
+                    <input class="form-control" #newCedula value="{{Cedula}}" required maxlength="13" id="Cedula" placeholder="000-0000000-0" pattern="[0-9]{3}[ -][0-9]{7}[ -][0-9]{1}" title="Formato: 000-0000000-0">
                 </div>
                 <div class="form-group">
                     <h5>Teléfono</h5>
-                    <input class="form-control" #newTelefono required maxlength="12" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" title="Formato: 000-000-0000">
+                    <input class="form-control" value="{{Telefono}}" #newTelefono required maxlength="12" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" title="Formato: 000-000-0000">
                 </div>
                 <div class="form-group">
                     <h5>Puesto</h5>
-                    <input id="CargoEmpleado" class="form-control" #newPuesto placeholder="Empacador" required>
+                    <input id="CargoEmpleado" class="form-control" value="{{Puesto}}" #newPuesto placeholder="Empacador" required>
                 </div>
                 <div class="form-group">
                     <h5>Sexo</h5>
                     <div class="form-check radio-green">
-                        <input type="radio" class="form-check-input" id="radioGreen1" name="Sexo" >
+                        <input type="radio" class="form-check-input" id="radioGreen1" name="Sexo" #newSexoM  value="M" >
                         <label class="form-check-label" for="radioGreen1">M</label>
                     </div>
                     <div class="form-check radio-green">
-                        <input type="radio" class="form-check-input" id="radioGreen2" name="Sexo" >
+                        <input type="radio" class="form-check-input" id="radioGreen2" name="Sexo" #newSexoF value="F" >
                         <label class="form-check-label" for="radioGreen2">F</label>
                     </div>
                 </div>
                 <button  class="btn btn-primary" [routerLink]="['../ModifiEmpleadosAlma']">Cancelar</button>
-                <button name="Editar" class="btn btn-danger">Editar</button>
+                <button name="Editar" class="btn btn-danger" (click)="UpdateEmpleado(newNombre,newApellido,newFechaNacimiento,newFechaIngreso,newCedula,newTelefono,newPuesto,newSexoM,newSexoF )">Editar</button>
             </form>
         </div>
         <div class="col-6">
             <h5 class="text-primary">Selecciona el Empleado</h5>
             <form class="row">
-                <select  name="select" class="col-9 form-control">
-                    <option  >
-                        
+                <select  name="select" [(ngModel)] = "seleccionado" class="col-9 form-control" (click)="GetEmpleadoSelected()">
+                    <option [value]="empleado.id" *ngFor="let empleado of Empleados">
+                        {{empleado.nombre}}
                     </option>
                 </select>
             </form>

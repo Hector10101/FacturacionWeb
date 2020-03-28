@@ -3,7 +3,7 @@
     <hr />
     <div class="row">
         <div class="col-6">
-            <form class="form-controler p-4">
+            <form class="form-controler p-4" (submit)="PostEmpleado(newNombre,newApellido,newFechaNacimiento,newFechaIngreso,newCedula,newTelefono,newPuesto,newSexoM, newSexoF)">
                 <div class="form-group">
                     <h5>Nombre</h5>
                     <input id="NameEmpleado" class="form-control" placeholder="Nombre" #newNombre required>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <h5>Fecha de Ingreso</h5>
-                    <input class="form-control" #newFechaNacimiento required type="date">
+                    <input class="form-control" #newFechaIngreso required type="date">
                 </div>
                 <div class="form-group">
                     <h5>Cedula</h5>
@@ -30,19 +30,19 @@
                 </div>
                 <div class="form-group">
                     <h5>Puesto</h5>
-                    <input id="CargoEmpleado" class="form-control" #newApellido placeholder="Empacador" required>
+                    <input id="CargoEmpleado" class="form-control" #newPuesto placeholder="Empacador" required>
                 </div>
                 <div class="form-group">
                     <h5>Sexo</h5>
                     <div class="form-check radio-green">
-                        <input type="radio" class="form-check-input" id="radioGreen1" name="Sexo" checked>
+                        <input type="radio" class="form-check-input" id="radioGreen1" value="M" #newSexoM name="Sexo">
                         <label class="form-check-label" for="radioGreen1">M</label>
                     </div>
                     <div class="form-check radio-green">
-                        <input type="radio" class="form-check-input" id="radioGreen2" name="Sexo" >
+                        <input type="radio" class="form-check-input" id="radioGreen2" value="F" #newSexoF name="Sexo"> 
                         <label class="form-check-label" for="radioGreen2">F</label>
                     </div>
-                </div>
+                </div> 
                 <button class="btn btn-primary" >Agregar</button>
             </form>
         </div>
