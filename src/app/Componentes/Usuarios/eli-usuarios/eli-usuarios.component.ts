@@ -7,19 +7,57 @@ import { APIservicesService } from 'src/app/Servicios/apiservices.service';
   styleUrls: ['./eli-usuarios.component.scss']
 })
 export class EliUsuariosComponent implements OnInit {
+
+  public ID : string;
+  public Nombre : string;
+  public User : string;
+  public Password : string;
+  public Area : string;
+  public NombreArea: string;
+  public seleccionado: string;
+
   public Usuarios: any = [];
 
   constructor(private APIServices: APIservicesService) { }
 
   ngOnInit(): void {
+    this.GetUser();
   }
 
-  DeleteUser(id) {
-    if (window.confirm('Are you sure, you want to delete?')){
-      this.APIServices.DeleteUser(id).subscribe(data => {
-       console.log(data);
-      })
+  GetUserSelected(){
+    for(let usuario of this.Usuarios){
+      if(this.seleccionado == usuario.id){
+        this.ID = usuario.id;
+          this.Nombre = usuario.nombre;
+          this.User = usuario.user;
+          this.Password = usuario.password;
+          this.Area = usuario.area;
+          this.NombreArea = usuario.nombredelArea;
+      }
     }
-  }  
-
-}  
+  }
+  GetUser(){
+    this.APIServices.GetUser().subscribe((data: {}) => {
+        this.Usuarios = data;
+        console.log(this.Usuarios);
+    })
+    }
+  DeleteUser() {
+    if(this.seleccionado != null){
+      if(this.seleccionado == this.ID){
+        if (window.confirm('Are you sure, you want to delete?')){
+          this.APIServices.DeleteUser(this.seleccionado).subscribe(data => {
+            this.GetUser();
+            this.ID = '';
+            this.Nombre = '';
+            this.User = '';
+            this.Password = '';
+            this.Area = '';
+            this.NombreArea = '';
+            this.seleccionado = '';
+          })
+        }
+      }
+    }
+  }
+}

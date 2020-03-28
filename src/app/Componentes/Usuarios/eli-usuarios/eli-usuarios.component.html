@@ -8,26 +8,26 @@
             <form class="form-controler border p-5">
                 <div class="form-group">
                     <h5>Nombre</h5>
-                    <input class="form-control" placeholder="Nombre"  #newNombre readonly required>
+                    <input class="form-control" placeholder="Nombre"  #newNombre value="{{Nombre}}" readonly required>
                 </div>
                 <div class="form-group">
                     <h5>User</h5>
-                    <input class="form-control" placeholder="User"  #newUser readonly required>
+                    <input class="form-control" placeholder="User"  value="{{User}}" #newUser  readonly required>
                 </div>
                 <div class="form-group">
                     <h5>Contraseña</h5>
-                    <input class="form-control" placeholder="Contraseña" type="password" readonly #newContraseña required>
+                    <input class="form-control" placeholder="Contraseña" value="{{Password}}" readonly #newContraseña required>
                 </div>
                 <div class="form-group">
                     <h5>Area</h5>
-                    <input class="form-control"  #newArea readonly required>
+                    <input class="form-control" placeholder="Area" #newArea value="{{Area}}" readonly required>
                 </div>
                 <div class="form-group">
                     <h5>Nombre del area</h5>
-                    <input class="form-control"  #newNombreArea readonly required>
+                    <input class="form-control" placeholder="Nomber del Area" #newNombreArea value="{{NombreArea}}" readonly required>
                 </div>
                 <button name="Editar" value="0"  class="btn btn-primary" [routerLink]="['../ModifiUsuarios']">Cancelar</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" >Eliminar</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" (click)="DeleteUser()">Eliminar</button>
             </form>
         </div>
 
@@ -35,10 +35,10 @@
             <h5 class="text-primary">Selecciona el Usuario</h5>
             
             <form class="row">
-                <select  name="select" class="col-9 form-control">
+                <select  name="select"  [(ngModel)] = "seleccionado" class="col-9 form-control" (click)="GetUserSelected()">
 
-                    <option >
-                        
+                    <option [value]="usuario.id" *ngFor="let usuario of Usuarios">
+                        {{usuario.nombre}}
                     </option>
                 </select>
                 
