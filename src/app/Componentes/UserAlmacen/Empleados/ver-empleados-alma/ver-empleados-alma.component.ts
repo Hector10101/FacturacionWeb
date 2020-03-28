@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APIservicesService } from 'src/app/Servicios/apiservices.service';
 
 @Component({
   selector: 'app-ver-empleados-alma',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ver-empleados-alma.component.scss']
 })
 export class VerEmpleadosAlmaComponent implements OnInit {
+  public Empleados: any = [];
 
-  constructor() { }
+
+  constructor(private APIServices: APIservicesService) { }
 
   ngOnInit(): void {
+    this.GetEmpleado();
   }
 
+  GetEmpleado(){
+    this.APIServices.GetEmpleado().subscribe((data: {}) => {
+        this.Empleados = data;
+        console.log(this.Empleados);
+    })
+    }
+
 }
+ 
