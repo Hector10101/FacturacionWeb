@@ -5,31 +5,31 @@
     <br />
     <div class="row">
         <div class="col-6">
-            <form class="form-controler  border p-5">
+            <form class="form-controler  border p-5" (submit)="UpdateUser(newNombre,newUser,newPassword,newArea, newNombreArea)">
                 <div class="form-group">
                     <h5>Nombre</h5>
-                    <input class="form-control" placeholder="Nombre"  #newNombre required>
+                    <input class="form-control" placeholder="Nombre"  #newNombre value="{{Nombre}}" required>
                 </div>
                 <div class="form-group">
                     <h5>User</h5>
-                    <input class="form-control" placeholder="User"  #newUser required>
+                    <input class="form-control" placeholder="User"  #newUser value="{{User}}" required>
                 </div>
                 <div class="form-group">
                     <h5>Contraseña</h5>
-                    <input class="form-control" placeholder="Contraseña" type="password"  #newContraseña required>
+                    <input class="form-control" placeholder="Contraseña"  #newPassword value="{{Password}}" required>
                 </div>
                 <div class="form-group">
                     <h5>Area</h5>
-                    <select class="form-control" #newArea required>
-                        <option></option>
+                    <select class="form-control" #newArea  required>
+                        <option>{{Area}}</option>
                         <option>Sucursal</option>
                         <option>Almacen</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <h5>Nombre del area</h5>
-                    <select class="form-control" #newNombreArea required>
-                        <option></option>
+                    <select class="form-control" #newNombreArea  required>
+                        <option>{{NombreArea}}</option>
                         <option>Sucursal</option>
                         <option>Almacen</option>
                     </select>
@@ -43,12 +43,11 @@
             <h5 class="text-primary">Selecciona el Usuario</h5>
             
             <form class="row">
-                <select  name="select" class="col-9 form-control">
-                    <option>
-                        
+                <select  name="select" class="col-9 form-control"  [(ngModel)] = "seleccionado" (click)="GetUserSelected()">
+                    <option [value]="usuario.id" *ngFor="let usuario of Usuarios">
+                        {{usuario.user}}
                     </option>
-                </select>
-                
+                </select>   
             </form>
         </div>
     </div>

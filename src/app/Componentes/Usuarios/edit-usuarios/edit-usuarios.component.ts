@@ -7,6 +7,14 @@ import { APIservicesService } from 'src/app/Servicios/apiservices.service';
   styleUrls: ['./edit-usuarios.component.scss']
 })
 export class EditUsuariosComponent implements OnInit {
+  public ID : string;
+  public Nombre : string;
+  public User : string;
+  public Password : string;
+  public Area : string;
+  public NombreArea: string;
+  public seleccionado: string;
+
   public Usuarios: any = [];
 
   constructor(private APIServices: APIservicesService) { }
@@ -21,31 +29,44 @@ export class EditUsuariosComponent implements OnInit {
         console.log(this.Usuarios);
     })
     }
-
-   
-    GetJustOneUser(){
-      this.APIServices.GetJustOneUser('IdINT').subscribe((data: {}) => {
-        console.log(data);
-    })
-    }
-    
-
-    UpdateUser() {
-      if(window.confirm('Are you sure, you want to update?')){
-        const user = {
-          id: "int",
-          Nombre: "string",
-          User: "string",
-          Password: "string",
-          Area: "string",
-          NombredelArea: "string",
-        };
-        this.APIServices.UpdateUser(2, user).subscribe(registro => {
-          console.log(registro);
-        })
+    GetUserSelected(){
+      for(let usuario of this.Usuarios){
+        if(this.seleccionado == usuario.id){
+          this.ID = usuario.id;
+          this.Nombre = usuario.nombre;
+          this.User = usuario.user;
+          this.Password = usuario.password;
+          this.Area = usuario.area;
+          this.NombreArea = usuario.nombredelArea;
+        }
       }
     }
-  
+
+    UpdateUser(newNombre: HTMLInputElement,newUser: HTMLInputElement,newPassword: HTMLInputElement,newArea: HTMLInputElement, newNombreArea: HTMLInputElement) {
+      if(this.seleccionado != null){
+      if(this.seleccionado == this.ID){
+      if (window.confirm('Are you sure, you want to modify?')){
+        const user = {
+          Id: this.seleccionado, 
+          Nombre: newNombre.value,
+          User: newUser.value,
+          Password: newPassword.value,
+          Area: newArea.value,
+          NombredelArea: newNombreArea.value,
+        };
+        this.APIServices.UpdateUser(this.seleccionado, user).subscribe(data => {
+          this.GetUser();
+          newNombre.value = '';
+          newUser.value = '';
+          newPassword.value = '';
+          newArea.value = '';
+          newNombreArea.value = '';
+          this.seleccionado = '';
+        } )
+      }
+      }
+    }
+    }
 
 
 }
