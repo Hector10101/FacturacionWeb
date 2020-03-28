@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
           this.Password = usuario.password;
           this.Area = usuario.area;
           this.NombreArea = usuario.nombredelArea;
-          let u: User = {nombredelArea: this.NombreArea};        
+          let u: User = {area: this.Area};        
           this.APIServices.setUserLoggedIn(u);
     
           console.log(u);
