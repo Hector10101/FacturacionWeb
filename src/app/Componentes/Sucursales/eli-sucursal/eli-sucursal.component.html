@@ -8,27 +8,27 @@
             <form class="form-controler border p-5">
                 <div class="form-group">
                     <h5>Nombre</h5>
-                    <input id="NameSucursal" class="form-control" placeholder="Nombre" #newNombre readonly>
+                    <input id="NameSucursal" class="form-control" placeholder="Nombre"  value="{{Nombre}}" #newNombre readonly>
                 </div>
                 <div class="form-group">
                     <h5>Ubicación</h5>
-                    <input id="UbicacionSucursal" class="form-control" placeholder="R.D. La Romana, Meliza, Calle Primera #6" #newHubicacion readonly>
+                    <input id="UbicacionSucursal" class="form-control" placeholder="R.D. La Romana, Meliza, Calle Primera #6" value="{{Ubicacion}}" #newHubicacion readonly>
                 </div>
                 <div class="form-group">
                     <h5>Teléfono</h5>
-                    <input class="form-control" placeholder="000-000-0000" #newTelefono readonly>
+                    <input class="form-control" placeholder="000-000-0000" value="{{Telefono}}" #newTelefono readonly>
                 </div>
                 <button name="Editar" class="btn btn-primary" [routerLink]="['../ModifiSucursales']">Cancelar</button>
-                <button name="Eliminar" type="submit" class="btn btn-danger" >Eliminar</button>
+                <button name="Eliminar" type="submit" class="btn btn-danger" (click)="DeleteSucursal()" >Eliminar</button>
             </form>
         </div>
-
+ 
         <div class="col-6">
             <h5 class="text-primary">Selecciona la Sucursal</h5>
             <form class="row">
-                <select  name="select" class="col-9 form-control">
-                    <option >
-                        
+                <select  name="select"  [(ngModel)] = "seleccionado" class="col-9 form-control" (click)="GetSucursalSelected()">
+                    <option   [value]="sucursal.id" *ngFor="let sucursal of Sucursales">
+                        {{sucursal.nombre}}
                     </option>
                 </select>
             </form>

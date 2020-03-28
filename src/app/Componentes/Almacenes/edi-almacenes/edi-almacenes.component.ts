@@ -47,7 +47,7 @@ export class EdiAlmacenesComponent implements OnInit {
      UpdateAlmacen(newNombre: HTMLInputElement,newDescripcion: HTMLInputElement,newUbicacion: HTMLInputElement,newTelefono: HTMLInputElement) {
       if(this.seleccionado != null){
       if(this.seleccionado == this.ID){
-      if (window.confirm('Are you sure, you want to delete?')){
+      if (window.confirm('Are you sure, you want to modify?')){
         const almacen = {
           Id: this.seleccionado, 
           Nombre: newNombre.value,
