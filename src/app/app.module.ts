@@ -55,8 +55,7 @@ import { ModifiProductosAlmaComponent } from './Componentes/UserAlmacen/Producto
 import { EditProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/edit-productos-alma/edit-productos-alma.component';
 import { EliProductosAlmaComponent } from './Componentes/UserAlmacen/Productos/eli-productos-alma/eli-productos-alma.component';
 import { FacturarAlmaComponent } from './Componentes/UserAlmacen/Facturar/facturar-alma/facturar-alma.component';
-
-
+import { LoginComponent } from './Componentes/Login/login/login.component';
 
 
 
@@ -116,6 +115,7 @@ import { FacturarAlmaComponent } from './Componentes/UserAlmacen/Facturar/factur
     EditProductosAlmaComponent,
     EliProductosAlmaComponent,
     FacturarAlmaComponent,
+    LoginComponent,
   
     
   ],
