@@ -56,6 +56,7 @@ export class AgregarEmpleadosComponent implements OnInit {
       newPuesto.value = '';
       newSexoF.checked=false;
       newSexoM.checked=false;
+      this.Goto("VerEmpleados");
     })
   }
 

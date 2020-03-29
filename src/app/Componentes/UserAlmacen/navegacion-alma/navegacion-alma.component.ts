@@ -10,7 +10,7 @@ import {RouterModule, Routes, Router } from '@angular/router';
 export class NavegacionAlmaComponent implements OnInit {
 
   trustedUser= "Almacen";
-  constructor(private APIServices: APIservicesService, private router: Router) { }
+  constructor(private APIServices: APIservicesService, private router: Router) { } 
 
   ngOnInit(): void {
 

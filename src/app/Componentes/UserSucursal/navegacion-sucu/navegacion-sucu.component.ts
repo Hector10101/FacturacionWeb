@@ -22,4 +22,22 @@ export class NavegacionSucuComponent implements OnInit {
     this.router.navigate(['/', ruta]);
   }
 
+  HomeProducto(){
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
+      this.Goto('HomeProductos'); 
+  }
+  HomeEmpleado(){
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
+      this.Goto('HomeEmpleados'); 
+  }
+  HomeFacturar(){
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
+      this.Goto('HomeFacturar'); 
+  }
 }
