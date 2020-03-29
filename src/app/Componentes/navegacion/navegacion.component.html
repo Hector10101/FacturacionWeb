@@ -5,13 +5,14 @@
                 <a href="/" class=" navbar-brand" [routerLink]="['home']">Facturacion Web</a>
             </div>
             <div class="col-3">
-                <a href="/" class=" navbar-brand"  [routerLink]="['HomeAlmacenes']">Almacenes</a>
+                
+                <button class="btn " (click)="HomeAlmacenes()"><a class=" navbar-brand">Almacenes</a></button>
             </div>
             <div class="col-3">
-                <a href="/" class=" navbar-brand"  [routerLink]="['HomeSucursales']">Sucursales</a>
+                <button class="btn " (click)="HomeSucursal()"><a class=" navbar-brand">Sucursales</a></button>
             </div>
             <div class="col-1">
-                <a href="/" class=" navbar-brand" [routerLink]="['HomeUsuarios']">Usuarios</a>
+                <button class="btn " (click)="HomeUsuario()"><a class=" navbar-brand">Usuarios</a></button>
             </div>
 
         </div>

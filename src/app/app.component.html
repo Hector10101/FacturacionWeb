@@ -1,15 +1,10 @@
-<app-navegacion ></app-navegacion>
+<app-navegacion hidden></app-navegacion>
 
 <div *ngIf="sucursalActivo">
-   
+    <app-navegacion-sucu></app-navegacion-sucu>
 </div>
 
-<app-navegacion-sucu></app-navegacion-sucu>
-
-
-
-
-<app-navegacion-alma ></app-navegacion-alma>
+<app-navegacion-alma hidden ></app-navegacion-alma>
 
 <router-outlet ></router-outlet>
 
