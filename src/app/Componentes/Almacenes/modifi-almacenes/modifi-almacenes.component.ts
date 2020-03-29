@@ -8,7 +8,7 @@ import {RouterModule, Routes, Router } from '@angular/router';
   styleUrls: ['./modifi-almacenes.component.scss']
 })
 export class ModifiAlmacenesComponent implements OnInit {
-  trustedUser= "Almacen";
+  trustedUser= "admin";
 
   constructor(private APIServices: APIservicesService, private router: Router) { }
   ngOnInit(): void { 

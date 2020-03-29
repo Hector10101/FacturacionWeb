@@ -18,7 +18,7 @@ export class EditUsuariosComponent implements OnInit {
 
   public Usuarios: any = [];
 
-  trustedUser= "Almacen";
+  trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
@@ -63,6 +63,7 @@ export class EditUsuariosComponent implements OnInit {
           Area: newArea.value,
           NombredelArea: newNombreArea.value,
         };
+        if(this.Area != "admin"){
         this.APIServices.UpdateUser(this.seleccionado, user).subscribe(data => {
           this.GetUser();
           newNombre.value = '';
@@ -72,7 +73,8 @@ export class EditUsuariosComponent implements OnInit {
           newNombreArea.value = '';
           this.seleccionado = '';
         } )
-      }
+      }else{window.alert("No se puede modificar a este usuario");}
+    }
       }
     }
     }

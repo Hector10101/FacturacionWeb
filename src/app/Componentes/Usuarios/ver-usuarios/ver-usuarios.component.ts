@@ -10,7 +10,7 @@ import {RouterModule, Routes, Router } from '@angular/router';
 export class VerUsuariosComponent implements OnInit {
   public Usuarios: any = [];
 
-  trustedUser= "Almacen";
+  trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {

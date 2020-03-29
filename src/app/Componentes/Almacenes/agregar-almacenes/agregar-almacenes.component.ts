@@ -9,7 +9,7 @@ import {RouterModule, Routes, Router } from '@angular/router';
 })
 export class AgregarAlmacenesComponent implements OnInit {
   public Almacenes: any = [];
-   trustedUser= "Almacen";
+   trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {

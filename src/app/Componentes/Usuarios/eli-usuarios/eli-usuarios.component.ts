@@ -19,7 +19,7 @@ export class EliUsuariosComponent implements OnInit {
 
   public Usuarios: any = [];
 
-  trustedUser= "Almacen";
+  trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
@@ -53,6 +53,7 @@ export class EliUsuariosComponent implements OnInit {
   DeleteUser() {
     if(this.seleccionado != null){
       if(this.seleccionado == this.ID){
+        if(this.Area !="admin"){
         if (window.confirm('Are you sure, you want to delete?')){
           this.APIServices.DeleteUser(this.seleccionado).subscribe(data => {
             this.GetUser();
@@ -65,6 +66,8 @@ export class EliUsuariosComponent implements OnInit {
             this.seleccionado = '';
           })
         }
+
+      }else{window.alert("Este Usuario no puede ser eliminado");}
       }
     }
   }

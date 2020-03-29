@@ -11,7 +11,7 @@ export class AgregarUsuariosComponent implements OnInit {
   public Usuarios: any = [];
 
 
-  trustedUser= "Almacen";
+  trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {

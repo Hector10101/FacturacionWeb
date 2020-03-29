@@ -10,6 +10,7 @@ import { User } from 'src/app/Modelos/user.models';
   styleUrls: ['./login.component.scss'] 
 })
 export class LoginComponent implements OnInit {
+
   public Usuarios: any = [];
 
   public ID : string;
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
     this.GetUser();
    console.log(this.APIServices.getUserLoggedIn());
   }
+  
   GetUser(){
     this.APIServices.GetUser().subscribe((data: {}) => {
         this.Usuarios = data;
@@ -49,8 +51,11 @@ export class LoginComponent implements OnInit {
           this.APIServices.setUserLoggedIn(u);
 
           console.log(u);
+          if(this.Area=="admin"){
+            this.Goto('HomeAlmacenes');
+          }
               if(this.Area=="Almacen"){
-              this.Goto('HomeAlmacenes');
+              this.Goto('VerProductosAlma');
             }
             if(this.Area=="Sucursal"){
               this.Goto('VerProductos');

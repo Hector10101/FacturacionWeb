@@ -10,7 +10,7 @@ import {RouterModule, Routes, Router } from '@angular/router';
 export class VerSucursaliesComponent implements OnInit {
   public Sucursales: any = [];
 
-  trustedUser= "Almacen";
+  trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {

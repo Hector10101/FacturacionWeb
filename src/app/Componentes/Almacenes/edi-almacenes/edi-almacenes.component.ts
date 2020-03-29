@@ -15,7 +15,7 @@ export class EdiAlmacenesComponent implements OnInit {
   public Telefono : string;
   public seleccionado: string;
   public Almacenes: any = [];
-  trustedUser= "Almacen";
+  trustedUser= "admin";
 
   constructor(private APIServices: APIservicesService,  private router: Router) { }
 

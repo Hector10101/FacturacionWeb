@@ -9,7 +9,7 @@ import {RouterModule, Routes, Router } from '@angular/router';
 })
 export class HomeUsuariosComponent implements OnInit {
 
-  trustedUser= "Almacen";
+  trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
 

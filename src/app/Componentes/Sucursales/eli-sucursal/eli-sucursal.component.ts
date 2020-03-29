@@ -19,7 +19,7 @@ export class EliSucursalComponent implements OnInit {
   public Sucursales: any = [];
 
 
-  trustedUser= "Almacen";
+  trustedUser= "admin";
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
