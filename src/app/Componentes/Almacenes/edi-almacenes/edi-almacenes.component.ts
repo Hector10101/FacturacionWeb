@@ -42,7 +42,7 @@ export class EdiAlmacenesComponent implements OnInit {
      
       }
     }
-  }
+  } 
 
   GetAlmacen(){
     this.APIServices.GetAlmacen().subscribe((data: {}) => {

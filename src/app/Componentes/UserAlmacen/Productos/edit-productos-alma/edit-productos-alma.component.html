@@ -50,7 +50,7 @@
             <form class="row">
                 <select  name="select" [(ngModel)] = "seleccionado" class="col-9 form-control" (click)="GetProductosSelected()">
                     <option [value]="producto.id" *ngFor="let producto of Productos">
-                        {{producto.nombre}}
+                        {{producto.nombre}} 
                     </option>
                 </select>
             </form>

@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-8">
                     <h5>Nombre del Vendedor</h5>
-                    <input id="NameEmpleado" class="form-control" placeholder="Nombre" #newNombre required>
+                    <input id="NameEmpleado" class="form-control" placeholder="Nombre" #newNombreVendedor required>
                 </div>
                 <div class="col-4">
                     <h5>Teléfono</h5>
@@ -27,18 +27,18 @@
                     <h5>Producto</h5>
                     <div class="row">
                         <div class="col-10">
-                            <select  name="select" [(ngModel)] = "seleccionado" class="col-9 form-control"required >
-                                <option [value]="producto.id" *ngFor="let producto of Productos">
+                            <select  name="select" [(ngModel)] = "seleccionado" class="col-9 form-control"  (click)="GetProductosSelected()"   required >
+                                <option [value]="producto.id" *ngFor="let producto of Productos" >
                                     {{producto.nombre}}
                                 </option>
                             </select>
-                            <button type="submit" class="btn  btn-primary">+</button>
+                            <button type="submit" class="btn  btn-primary" (click)="PostFactura()">Registrar Factura</button>
                         </div>
                     </div>
                 </div>  
                 <div class="col-3">
-                    <h5>Cantidad</h5>
-                    <input id="Cantidad" type="number" min="1" class="form-control" placeholder="0" #newNombre required>
+                    <h5>Cantidad Disponible</h5>
+                    <input id="Cantidad" type="number" min="1" max="{{Cantidad}}" value="{{Cantidad}}" class="form-control" placeholder="0" (click)="SetCantidad(newCant)" #newCant required>
                     <br>
                 </div>     
             </div>
@@ -56,34 +56,18 @@
                 <tbody>
                     <tr >
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{cantidadSelected}}</td>
+                        <td>{{Nombre}}</td>
+                        <td>{{PrecioUnitario}}</td>
+                        <td>{{preciototalFact}}</td>
                         
-                    <tr >
-                        
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>SUBTOTAL$</td>
-                        <td></td>
-                    </tr>
-                    <tr >
-                        
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>ITB(18%)$</td>
-                        <td></td>
-                    </tr>
                     <tr >
                         
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>TOTAL$</td>
-                        <td></td>
+                        <td>{{preciototalFact}}</td>
                     </tr>
                 </tbody>
                 
