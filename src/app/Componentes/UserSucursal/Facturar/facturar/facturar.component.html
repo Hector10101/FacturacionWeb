@@ -1,10 +1,97 @@
 <div class="container mt-4">
-    <h3>Nuevo Factura</h3>
+    <h3>Nueva Factura</h3>
     <hr />
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 ">
+            <div class="row">
+                <div class="col-4">
+                    <h5>Cliente </h5>
+                    <input id="NameEmpleado" class="form-control" placeholder="Nombre" #newNombre required>
+                </div>
+                <div class="col-8">
+                    <h5>Cedula</h5>
+                    <input class="form-control" #newCedula required maxlength="13" id="Cedula" placeholder="000-0000000-0" pattern="[0-9]{3}[ -][0-9]{7}[ -][0-9]{1}" title="Formato: 000-0000000-0">
+                    <br>
+                </div>
+                <div class="col-8">
+                    <h5>Nombre del Vendedor</h5>
+                    <input id="NameEmpleado" class="form-control" placeholder="Nombre" #newNombre required>
+                </div>
+                <div class="col-4">
+                    <h5>Teléfono</h5>
+                        <input class="form-control" #newTelefono required maxlength="12" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" title="Formato: 000-000-0000">
+                    <br>
+                </div>
+                <div class="col-9">
+                    <h5>Producto</h5>
+                    <div class="row">
+                        <div class="col-10">
+                            <select  name="select" [(ngModel)] = "seleccionado" class="col-9 form-control"required >
+                                <option [value]="producto.id" *ngFor="let producto of Productos">
+                                    {{producto.nombre}}
+                                </option>
+                            </select>
+                            <button type="submit" class="btn  btn-primary">+</button>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-3">
+                    <h5>Cantidad</h5>
+                    <input id="Cantidad" type="number" min="1" class="form-control" placeholder="0" #newNombre required>
+                    <br>
+                </div>     
+            </div>
         </div>
         <div class="col-6">
+            <table class="table">
+                <thead>
+                    <th>#</th>
+                    <th>CANT.</th>
+                    <th>PODUCTO</th>
+                    <th>PRECIO UNIT.</th>
+                    <th>PRECIO TOTAL</th>
+ 
+                </thead>
+                <tbody>
+                    <tr >
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                    <tr >
+                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>SUBTOTAL$</td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ITB(18%)$</td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>TOTAL$</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <div class="d-flex flex-row-reverse">
+                
+                <button class="btn p-2  btn-primary">🖨️</button>
+           
+            </div>
         </div>
     </div>
 </div>
