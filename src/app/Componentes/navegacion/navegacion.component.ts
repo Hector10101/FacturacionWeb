@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { APIservicesService } from 'src/app/Servicios/apiservices.service';
 import {RouterModule, Routes, Router } from '@angular/router';
-
+ 
 @Component({
   selector: 'app-navegacion',
   templateUrl: './navegacion.component.html',

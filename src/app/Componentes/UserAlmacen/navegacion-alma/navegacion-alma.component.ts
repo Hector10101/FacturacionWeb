@@ -13,13 +13,29 @@ export class NavegacionAlmaComponent implements OnInit {
   constructor(private APIServices: APIservicesService, private router: Router) { }
 
   ngOnInit(): void {
-    if((this.trustedUser !=this.APIServices.getUserLoggedIn())){
-      this.Goto('Login'); 
-    }
+
   }
   Goto(ruta) {
     this.router.navigate(['/', ruta]);
   }
 
+  HomeProducto(){
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
+      this.Goto('HomeProductosAlma'); 
+  }
+  HomeEmpleado(){
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
+      this.Goto('HomeEmpleadosAlma'); 
+  }
+  HomeFacturar(){
+    if(this.trustedUser !=this.APIServices.getUserLoggedIn()){
+      this.Goto('Home'); 
+    }
+      this.Goto('HomeFacturarAlma'); 
+  }
   
 }
